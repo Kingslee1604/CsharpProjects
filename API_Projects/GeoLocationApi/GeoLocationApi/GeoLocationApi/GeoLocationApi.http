@@ -1,0 +1,6 @@
+@GeoLocationApi_HostAddress = http://localhost:5038
+
+GET {{GeoLocationApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
