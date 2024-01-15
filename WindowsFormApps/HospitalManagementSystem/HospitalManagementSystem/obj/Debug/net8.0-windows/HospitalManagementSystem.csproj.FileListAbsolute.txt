@@ -1,0 +1,17 @@
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0-windows\HospitalManagementSystem.exe
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0-windows\HospitalManagementSystem.deps.json
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0-windows\HospitalManagementSystem.runtimeconfig.json
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0-windows\HospitalManagementSystem.dll
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0-windows\HospitalManagementSystem.pdb
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.MainForm.resources
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.csproj.GenerateResource.cache
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.AssemblyInfoInputs.cache
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.AssemblyInfo.cs
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.csproj.CoreCompileInputs.cache
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.sourcelink.json
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.dll
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\refint\HospitalManagementSystem.dll
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.pdb
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\HospitalManagementSystem.genruntimeconfig.cache
+C:\GitHubLocal\CsharpProjects\WindowsFormApps\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0-windows\ref\HospitalManagementSystem.dll
