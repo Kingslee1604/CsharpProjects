@@ -1,0 +1,39 @@
+﻿<!-- MainPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContractLoadSuite.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SmallButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="120" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="60">
+        <Frame CornerRadius="10" BorderColor="Gray" Padding="10">
+            <StackLayout>
+                <!-- Excel Path -->
+                <Label Text="Enter the Input Path for Excel" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Entry x:Name="excelPathEntry" Placeholder="Select Input Path" HorizontalOptions="StartAndExpand" WidthRequest="200" />
+                    <Button Text="Browse" Clicked="OnSelectExcelPathClicked" Style="{StaticResource SmallButtonStyle}" />
+                </StackLayout>
+
+                <!-- XML Files Folder Path -->
+                <Label Text="Enter the Input Path for Files to Read" Margin="0,20,0,0" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Entry x:Name="xmlFolderPathEntry" Placeholder="Select Input Path" HorizontalOptions="StartAndExpand" WidthRequest="200" />
+                    <Button Text="Browse" Clicked="OnSelectXmlFolderPathClicked" Style="{StaticResource SmallButtonStyle}" />
+                </StackLayout>
+
+                <!-- Process Button -->
+                <Button Text="Process" Clicked="OnProcessClicked" Style="{StaticResource SmallButtonStyle}" Margin="0,20,0,0" HorizontalOptions="Start" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
