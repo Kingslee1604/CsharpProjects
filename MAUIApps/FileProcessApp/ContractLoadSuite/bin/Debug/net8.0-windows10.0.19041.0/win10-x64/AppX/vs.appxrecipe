@@ -16,8 +16,7 @@
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>
-    </WindowsSdkPath>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\GitHubLocal\CsharpProjects\MAUIApps\FileProcessApp\ContractLoadSuite\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>A7A6CBFAB78DF154B4FBE988267BF965152D9B833D980B1BF30CB2087EDB8139</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.contractloadsuite_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
@@ -30,7 +29,7 @@
     <AppXManifest Include="C:\GitHubLocal\CsharpProjects\MAUIApps\FileProcessApp\ContractLoadSuite\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-15T22:01:03.732</Modified>
+      <Modified>2024-02-04T05:55:28.915</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitHubLocal\CsharpProjects\MAUIApps\FileProcessApp\ContractLoadSuite\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ContractLoadSuite.dll">
       <PackagePath>ContractLoadSuite.dll</PackagePath>
-      <Modified>2024-01-15T22:01:03.336</Modified>
+      <Modified>2024-02-04T05:55:27.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitHubLocal\CsharpProjects\MAUIApps\FileProcessApp\ContractLoadSuite\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ContractLoadSuite.exe</PackagePath>
-      <Modified>2024-01-15T22:01:03.336</Modified>
+      <Modified>2024-02-04T05:55:27.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitHubLocal\CsharpProjects\MAUIApps\FileProcessApp\ContractLoadSuite\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

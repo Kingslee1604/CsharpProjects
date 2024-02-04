@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContractLoadSuite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b9e3160804e1ea727e5aa97faef22b3dd82d03e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7e76865e5f3595ef72650e6a94b3e6f432d0345b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContractLoadSuite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContractLoadSuite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
