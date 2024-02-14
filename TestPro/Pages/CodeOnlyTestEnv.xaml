@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestPro.Pages.CodeOnlyTestEnvPage"
+             Title="CodeOnlyTestEnv">
+
+    <!-- Define common styles for labels and entries -->
+    <ContentPage.Resources>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="BackgroundColor" Value="Navy" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="VerticalOptions" Value="Start" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="WidthRequest" Value="180" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0" />
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Navy" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="5,0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!-- Frame for Input Excel Sheet, Folder Name Entries, and Process Button -->
+            <Frame BorderColor="Navy" CornerRadius="5" Padding="10">
+                <Grid RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <!-- Row for the Input Excel Sheet -->
+                        <RowDefinition Height="Auto" />
+                        <!-- Row for the Input Folder Name -->
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <!-- Column for the label -->
+                        <ColumnDefinition Width="3*" />
+                        <!-- Expanded column for the entry, given more space -->
+                        <ColumnDefinition Width="*" />
+                        <!-- Column for the browse button -->
+                        <ColumnDefinition Width="*" />
+                        <!-- Column for the process button -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Input Excel Sheet Label -->
+                    <Label Grid.Row="0" Grid.Column="0" Text="Input Excel Sheet path:" Style="{StaticResource LabelStyle}" />
+
+                    <!-- Input Excel Sheet Entry -->
+                    <Entry Grid.Row="0" Grid.Column="1" x:Name="ExcelSheetEntry" Placeholder="Enter path or select file" Style="{StaticResource EntryStyle}" />
+
+                    <!-- Browse Button for Excel Sheet -->
+                    <Button Grid.Row="0" Grid.Column="2" Text="Browse" Style="{StaticResource ButtonStyle}" />
+
+                    <!-- Process Button for Excel Sheet -->
+                    <Button Grid.Row="0" Grid.Column="3" Text="Process" Style="{StaticResource ButtonStyle}" />
+
+                    <!-- Input Folder Name Label -->
+                    <Label Grid.Row="1" Grid.Column="0" Text="Input Folder Name path:" Style="{StaticResource LabelStyle}" />
+
+                    <!-- Input Folder Name Entry -->
+                    <Entry Grid.Row="1" Grid.Column="1" x:Name="FolderNameEntry" Placeholder="Select folder" Style="{StaticResource EntryStyle}" />
+                </Grid>
+            </Frame>
+
+            <!-- Progress Bar -->
+            <ProgressBar x:Name="ProgressBar" IsVisible="False" Margin="20,10" />
+
+            <!-- DB Credential Entries -->
+            <Grid Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Facets DBData Section without Title -->
+                <Frame Grid.Column="0" BorderColor="Navy" CornerRadius="5" Padding="20">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Facets Environment -->
+                        <Label Style="{StaticResource LabelStyle}" Grid.Row="0" Grid.Column="0" Text="Facets Environment:" />
+                        <Entry Style="{StaticResource EntryStyle}" Grid.Row="0" Grid.Column="1" x:Name="EnvironmentEntry" Placeholder="Enter Facets Environment" />
+
+                        <!-- Facets Password -->
+                        <Label Style="{StaticResource LabelStyle}" Grid.Row="1" Grid.Column="0" Text="Facets Password:" />
+                        <Entry Style="{StaticResource EntryStyle}" Grid.Row="1" Grid.Column="1" x:Name="PasswordEntry" Placeholder="Enter Facets Password" IsPassword="True" />
+
+                        <!-- PHDB Environment -->
+                        <Label Style="{StaticResource LabelStyle}" Grid.Row="2" Grid.Column="0" Text="PHDB Environment:" />
+                        <Entry Style="{StaticResource EntryStyle}" Grid.Row="2" Grid.Column="1" x:Name="PHDBEnvironmentEntry" Placeholder="Enter PHDB Environment" />
+                        
+                        <!-- PHDB Password -->
+                        <Label Style="{StaticResource LabelStyle}" Grid.Row="3" Grid.Column="0" Text="PHDB Password:" />
+                        <Entry Style="{StaticResource EntryStyle}" Grid.Row="3" Grid.Column="1" x:Name="PHDBPasswordEntry" Placeholder="Enter PHDB Password" IsPassword="True" />
+
+                    </Grid>
+                </Frame>
+
+                <!-- PHDB DBData Section without Title -->
+                <Frame Grid.Column="1" BorderColor="Navy" CornerRadius="5" Padding="20">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- FXI REGION -->
+                        <Label Style="{StaticResource LabelStyle}" Grid.Row="0" Grid.Column="0" Text="Fxi Environment:" />
+                        <Entry Style="{StaticResource EntryStyle}" Grid.Row="0" Grid.Column="1" x:Name="FxiRegion" Placeholder="Enter FXI Link" />
+
+                        <!-- Provider Service Environment -->
+                        <Label Style="{StaticResource LabelStyle}" Grid.Row="1" Grid.Column="0" Text="Provider Environment:" />
+                        <Entry Style="{StaticResource EntryStyle}" Grid.Row="1" Grid.Column="1" x:Name="ProviderServiceEnvEntry" Placeholder="Enter Provider Environment" />
+
+                        <!-- Provider Service Password -->
+                        <Label Style="{StaticResource LabelStyle}" Grid.Row="2" Grid.Column="0" Text="Provider Service Pwd:" />
+                        <Entry Style="{StaticResource EntryStyle}" Grid.Row="2" Grid.Column="1" x:Name="ProviderServicePasswordEntry" Placeholder="Enter Provider Service Password" />
+
+                    </Grid>
+                </Frame>
+
+            </Grid>
+            <!-- Navigation Buttons for TestCaseValidation and Report -->
+            <Grid Padding="0" RowSpacing="10" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                        Text="Test Case Validation"
+                        Style="{StaticResource ButtonStyle}"
+                        Clicked="OnTestCaseValidationClicked" 
+                        HorizontalOptions="FillAndExpand" />
+                <Button Grid.Column="1"
+                        Text="Report"
+                        Style="{StaticResource ButtonStyle}"
+                        Clicked="OnReportClicked"
+                        HorizontalOptions="FillAndExpand" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

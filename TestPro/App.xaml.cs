@@ -1,4 +1,6 @@
-﻿namespace TestPro
+﻿using Microsoft.Maui.Graphics;
+
+namespace TestPro
 {
     public partial class App : Application
     {
@@ -6,7 +8,15 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new MainTabbedPage())
+            {
+                BarBackgroundColor = Colors.Transparent,
+                BarTextColor = Colors.White
+            };
+
+            // Hide the navigation bar
+            NavigationPage.SetHasNavigationBar(MainPage, false);
         }
     }
 }
+

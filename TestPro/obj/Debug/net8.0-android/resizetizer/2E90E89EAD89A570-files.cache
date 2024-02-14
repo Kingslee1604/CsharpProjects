@@ -1,8 +1,7 @@
-﻿obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
-obj\Debug\net8.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
-obj\Debug\net8.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
-obj\Debug\net8.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
-obj\Debug\net8.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
+﻿obj\Debug\net8.0-android\resizetizer\r\drawable\automation_image.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\automation_image_productiviti.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\phlogo.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\testresults.png
 obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
 obj\Debug\net8.0-android\resizetizer\r\mipmap-hdpi\appicon.png

@@ -28,11 +28,47 @@ build_metadata.AdditionalFiles.ManifestResourceName = TestPro.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/GitHubLocal/CsharpProjects/TestPro/MainPage.xaml]
+[C:/GitHubLocal/CsharpProjects/TestPro/Pages/AWSHostedServiceTest.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TestPro.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestPro.Pages.AWSHostedServiceTest.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\AWSHostedServiceTest.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\AWSHostedServiceTest.xaml
+
+[C:/GitHubLocal/CsharpProjects/TestPro/Pages/CodeOnlyTestEnv.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestPro.Pages.CodeOnlyTestEnv.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\CodeOnlyTestEnv.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\CodeOnlyTestEnv.xaml
+
+[C:/GitHubLocal/CsharpProjects/TestPro/Pages/EDIFECSAWSServiceTest.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestPro.Pages.EDIFECSAWSServiceTest.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\EDIFECSAWSServiceTest.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\EDIFECSAWSServiceTest.xaml
+
+[C:/GitHubLocal/CsharpProjects/TestPro/Pages/MainTabbedPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestPro.Pages.MainTabbedPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MainTabbedPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MainTabbedPage.xaml
+
+[C:/GitHubLocal/CsharpProjects/TestPro/Pages/Test.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestPro.Pages.Test.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Test.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Test.xaml
+
+[C:/GitHubLocal/CsharpProjects/TestPro/Pages/TestCasesReport.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestPro.Pages.TestCasesReport.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\TestCasesReport.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\TestCasesReport.xaml
+
+[C:/GitHubLocal/CsharpProjects/TestPro/Pages/TestCasesResults.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TestPro.Pages.TestCasesResults.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\TestCasesResults.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\TestCasesResults.xaml
 
 [C:/GitHubLocal/CsharpProjects/TestPro/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

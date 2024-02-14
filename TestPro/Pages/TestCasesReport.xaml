@@ -1,0 +1,74 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestPro.ViewModels"
+             x:Class="TestPro.Pages.TestCasesReport"
+             Title="TestCasesReport">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <!-- Header Layout -->
+            <!-- Header Layout -->
+            <Frame BorderColor="Navy" CornerRadius="5" Padding="0">
+                <Grid BackgroundColor="Navy">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="SBSBID" TextColor="White" Margin="10"/>
+                    <Label Grid.Column="1" Text="FIRSTNAME" TextColor="White" Margin="10"/>
+                    <Label Grid.Column="2" Text="LASTNAME" TextColor="White" Margin="10"/>
+                    <Label Grid.Column="3" Text="SBSBEFFDT" TextColor="White" Margin="10"/>
+                    <Label Grid.Column="4" Text="SBSBTERMDT" TextColor="White" Margin="10"/>
+                    <Label Grid.Column="5" Text="SBELEVENTS" TextColor="White" Margin="10"/>
+                    <Label Grid.Column="6" Text="MEELEVENTS" TextColor="White" Margin="10"/>
+                </Grid>
+            </Frame>
+            <!-- Data Display -->
+            <Frame BorderColor="Navy" CornerRadius="5" Padding="0">
+                <CollectionView ItemsSource="{Binding ReportData}" BackgroundColor="White">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="#DDD">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <BoxView Grid.Column="0" BackgroundColor="White" Margin="1"/>
+                                <BoxView Grid.Column="1" BackgroundColor="White" Margin="1"/>
+                                <BoxView Grid.Column="2" BackgroundColor="White" Margin="1"/>
+                                <BoxView Grid.Column="3" BackgroundColor="White" Margin="1"/>
+                                <BoxView Grid.Column="4" BackgroundColor="White" Margin="1"/>
+                                <BoxView Grid.Column="5" BackgroundColor="White" Margin="1"/>
+                                <BoxView Grid.Column="6" BackgroundColor="White" Margin="1"/>
+                                <Label Grid.Column="0" Text="{Binding SBSBID}" Margin="10"/>
+                                <Label Grid.Column="1" Text="{Binding FIRSTNAME}" Margin="10"/>
+                                <Label Grid.Column="2" Text="{Binding LASTNAME}" Margin="10"/>
+                                <Label Grid.Column="3" Text="{Binding SBSBEFFDT}" Margin="10"/>
+                                <Label Grid.Column="4" Text="{Binding SBSBTERMDT}" Margin="10"/>
+                                <Label Grid.Column="5" Text="{Binding SBELEVENTS}" Margin="10"/>
+                                <Label Grid.Column="6" Text="{Binding MEELEVENTS}" Margin="10"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
+            <!-- Export Button -->
+            <Button Text="Export to Excel"
+                    Clicked="OnExportButtonClicked"
+                    BackgroundColor="Navy"
+                    TextColor="White"
+                    CornerRadius="5"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

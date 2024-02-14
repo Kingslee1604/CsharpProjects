@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestPro.MainTabbedPage"
+             Padding="0">
+    
+    <!-- Main Layout -->
+    <Grid>
+
+        <!-- Define rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header height -->
+            <RowDefinition Height="*"/>
+            <!-- Content height -->
+            <RowDefinition Height="Auto"/>
+            <!-- Footer height -->
+        </Grid.RowDefinitions>
+
+        <!-- Header Section -->
+            <Grid BackgroundColor="Navy" Padding="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" />
+                    <!-- Logo width -->
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Logo width -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Centered Title -->
+            <Label Text="EDI Modernizer Test Engine"
+                   Grid.Column="1"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                
+            <!-- Logo Image on the Right -->
+            <Image Source="phlogo.png" 
+                   Grid.Column="0" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="Center"
+                   HeightRequest="40"
+                   WidthRequest="120"
+                   Aspect="AspectFit"
+                   Margin="30,0,0,0"/>
+        </Grid>
+
+        <!-- Module Selection -->
+        <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- CodeOnlyTestEnv Frame -->
+            <Frame Grid.Column="0" BackgroundColor="Transparent" Padding="0">
+                <StackLayout Spacing="0">
+                    <!-- Module Name -->
+                    <Label Text="CodeOnlyTestEnv"
+               BackgroundColor="Navy"
+               TextColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Center"
+               FontSize="20"
+               FontAttributes="Bold"
+               HeightRequest="50"/>
+                    <!-- You can set a fixed height for the label -->
+
+                    <!-- Image Fills the Remaining Space -->
+                    <Image Source="automation_image_productiviti.png" Aspect="AspectFit"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCodeOnlyTestEnvClicked" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!-- AWSHostedServiceTest Frame -->
+            <Frame Grid.Column="1" BackgroundColor="Transparent" Padding="0">
+                <StackLayout Spacing="0">
+                    <!-- Module Name -->
+                    <Label Text="AWSHostedServiceTest"
+               BackgroundColor="Navy"
+               TextColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Center"
+               FontSize="20"
+               FontAttributes="Bold"
+               HeightRequest="50"/>
+                    <!-- You can set a fixed height for the label -->
+
+                    <!-- Image Fills the Remaining Space -->
+                    <Image Source="automation_image.png" Aspect="AspectFit"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAWSHostedServiceTestClicked" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!-- EDIFECSAWSServiceTest Frame -->
+            <Frame Grid.Column="2" BackgroundColor="Transparent" Padding="0">
+                <StackLayout Spacing="0">
+                    <!-- Module Name -->
+                    <Label Text="EDIFECSAWSServiceTest"
+               BackgroundColor="Navy"
+               TextColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Center"
+               FontSize="20"
+               FontAttributes="Bold"
+               HeightRequest="50"/>
+                    <!-- You can set a fixed height for the label -->
+
+                    <!-- Image Fills the Remaining Space -->
+                    <Image Source="automation_image_productiviti.png" Aspect="AspectFit"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnEDIFECSAWSServiceTestClicked" />
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+
+        <!-- Content Presenter -->
+        <ContentView x:Name="ContentPresenter" 
+                     Grid.Row="1"
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand" />
+
+        <!-- Footer Section -->
+        <Grid BackgroundColor="Navy" 
+              Padding="10" 
+              HeightRequest="50" 
+              HorizontalOptions="FillAndExpand"
+              Grid.Row="2">
+            <Label Text=""
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

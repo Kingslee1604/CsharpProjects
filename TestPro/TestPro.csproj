@@ -57,10 +57,50 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.6" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.6" />
+		<PackageReference Include="EPPlus" Version="7.0.8" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\AWSHostedServiceTest.xaml.cs">
+	    <DependentUpon>AWSHostedServiceTest.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\EDIFECSAWSServiceTest.xaml.cs">
+	    <DependentUpon>EDIFECSAWSServiceTest.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\MainTabbedPage.xaml.cs">
+	    <DependentUpon>MainTabbedPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\TestCasesResults.xaml.cs">
+	    <DependentUpon>TestCasesResults.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\TestCasesReport.xaml.cs">
+	    <DependentUpon>TestCasesReport.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\EDIFECSAWSServiceTest.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AWSHostedServiceTest.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\CodeOnlyTestEnv.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Test.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\TestCasesReport.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\TestCasesResults.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

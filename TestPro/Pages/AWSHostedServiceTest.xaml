@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestPro.Pages.AWSHostedServiceTest"
+             Title="AWSHostedServiceTest">
+
+    <StackLayout Padding="20" Spacing="20">
+        <!-- Input Excel Sheet -->
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="Input Excel Sheet:" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start"/>
+            <Entry x:Name="ExcelSheetEntry" 
+                   Placeholder="Enter path or select file" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Button Text="Browse" 
+                    Clicked="OnBrowseExcelClicked"/>
+        </StackLayout>
+
+        <!-- Input Folder Name -->
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="Input Folder Name:" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start"/>
+            <Entry x:Name="FolderNameEntry" 
+                   Placeholder="Select folder" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Button Text="Browse" 
+                    Clicked="OnBrowseFolderClicked"/>
+        </StackLayout>
+
+        <!-- Process Button -->
+        <Button Text="Process" 
+                Clicked="OnProcessClicked"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar x:Name="ProgressBar" 
+                     IsVisible="False"/>
+
+    </StackLayout>
+</ContentPage>
