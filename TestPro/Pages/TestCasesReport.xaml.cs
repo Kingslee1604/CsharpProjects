@@ -1,16 +1,18 @@
-﻿using TestPro.Services;
+﻿using System.Collections.ObjectModel;
+using TestPro.Models;
+using TestPro.Services;
 using TestPro.ViewModels;
 
 namespace TestPro.Pages
 {
     public partial class TestCasesReport : ContentPage
     {
-        public TestCasesReport()
+
+        public TestCasesReport(ObservableCollection<ReportItem> reportItems)
         {
             InitializeComponent();
             // Initialize components specific to CodeOnlyTestEnv functionality
-            var reportDataService = new ReportDataService();
-            BindingContext = new TestCasesReportViewModel(reportDataService);
+            BindingContext = new TestCasesReportViewModel(reportItems);
         }
 
         private async void OnExportButtonClicked(object sender, EventArgs e)

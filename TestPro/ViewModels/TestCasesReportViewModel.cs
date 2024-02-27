@@ -11,15 +11,44 @@ namespace TestPro.ViewModels
 {
     public class TestCasesReportViewModel : INotifyPropertyChanged
     {
-        private readonly ReportDataService reportDataService;
+        private ObservableCollection<ReportItem> _reportData;
 
-        public ObservableCollection<ReportItem> ReportData { get;}
-
-        public TestCasesReportViewModel(ReportDataService reportDataService)
+        public ObservableCollection<ReportItem> ReportData
         {
-            this.reportDataService = reportDataService ?? throw new ArgumentNullException(nameof(reportDataService));
-            ReportData = reportDataService.GetReportData();
+            get => _reportData;
+            set
+            {
+                if (_reportData != value)
+                {
+                    _reportData = value;
+                    OnPropertyChanged(nameof(ReportData));
+                    OnPropertyChanged(nameof(FormattedReportData));
+                }
+            }
         }
+
+        public ObservableCollection<string> FormattedReportData
+        {
+            get
+            {
+                return new ObservableCollection<string>(
+                    _reportData.Select(item =>
+                        $"SBSBID: {item.SBSBID}\n" +
+                        $"FIRSTNAME: {item.FIRSTNAME}\n" +
+                        $"LASTNAME: {item.LASTNAME}\n" +
+                        $"SBSBEFFDT: {item.SBSBEFFDT}\n" +
+                        $"SBSBTERMDT: {item.SBSBTERMDT}\n" +
+                        $"SBELEVENTS: {item.SBELEVENTS}\n" +
+                        $"MEELEVENTS: {item.MEELEVENTS}"));
+            }
+        }
+
+        public TestCasesReportViewModel(ObservableCollection<ReportItem> reportItem)
+        {
+            ReportData = reportItem;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
@@ -75,7 +104,5 @@ namespace TestPro.ViewModels
                 return null; // Return null to indicate failure
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

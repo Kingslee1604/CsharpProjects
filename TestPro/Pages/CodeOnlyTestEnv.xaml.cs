@@ -1,11 +1,17 @@
 ﻿
+using System.Collections.ObjectModel;
+using TestPro.Models;
+
 namespace TestPro.Pages
 {
     public partial class CodeOnlyTestEnvPage : ContentPage
     {
+        private ObservableCollection<ReportItem> reportData;
+
         public CodeOnlyTestEnvPage()
         {
             InitializeComponent();
+            reportData = new ObservableCollection<ReportItem>();
         }
 
         private void OnBrowseExcelClicked(object sender, EventArgs e)
@@ -40,8 +46,21 @@ namespace TestPro.Pages
 
         private async void OnReportClicked(object sender, EventArgs e)
         {
+            reportData.Clear();
+            ReportItem item = new ReportItem
+            {
+                SBSBID = "12345",
+                FIRSTNAME = "John",
+                LASTNAME = "Doe",
+                SBSBEFFDT = "TEST",
+                SBSBTERMDT = "TEST",
+                SBELEVENTS = "TEST",
+                MEELEVENTS = "TEST"
+            };
+            reportData.Add(item);
+
             // Navigate to TestCasesReport
-            await Navigation.PushAsync(new TestCasesReport());
+            await Navigation.PushAsync(new TestCasesReport(reportData));
         }
     }
 

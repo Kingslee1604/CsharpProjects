@@ -11,7 +11,19 @@ namespace TestPro.Services
             return new ObservableCollection<ReportItem>
             {
                 new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST"},
-                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" }
+                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" },
+                new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST"},
+                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" },
+                new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST"},
+                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" },
+                new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST"},
+                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" },
+                new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST"},
+                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" },
+                new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST"},
+                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" },
+                new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST"},
+                new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS ="TEST", MEELEVENTS = "TEST" },
                 // Add more items as needed
             };
         }

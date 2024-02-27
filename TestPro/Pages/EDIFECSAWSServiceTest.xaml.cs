@@ -1,11 +1,18 @@
 ﻿
+using System.Collections.ObjectModel;
+using TestPro.Models;
+using TestPro.Services;
+
 namespace TestPro.Pages
 {
     public partial class EDIFECSAWSServiceTest : ContentPage
     {
+        private ObservableCollection<ReportItem> reportData;
+
         public EDIFECSAWSServiceTest()
         {
             InitializeComponent();
+            reportData = new ObservableCollection<ReportItem>();
             // Initialize components specific to CodeOnlyTestEnv functionality
         }
 
@@ -41,8 +48,28 @@ namespace TestPro.Pages
 
         private async void OnReportClicked(object sender, EventArgs e)
         {
-            // Navigate to TestCasesReport
-            await Navigation.PushAsync(new TestCasesReport());
+            reportData.Clear();
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "12345", FIRSTNAME = "John", LASTNAME = "Doe", SBSBEFFDT = "TEST", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+            reportData.Add(new ReportItem { SBSBID = "67890", FIRSTNAME = "Jane", LASTNAME = "Smith", SBSBEFFDT = "FILE PROCESS IS FAILED FOR REASON CODE 123", SBSBTERMDT = "TEST", SBELEVENTS = "TEST", MEELEVENTS = "TEST" });
+
+            await Navigation.PushAsync(new TestCasesReport(reportData));
+
         }
     }
 }

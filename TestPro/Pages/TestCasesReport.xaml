@@ -3,72 +3,89 @@
              xmlns:local="clr-namespace:TestPro.ViewModels"
              x:Class="TestPro.Pages.TestCasesReport"
              Title="TestCasesReport">
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
-            <!-- Header Layout -->
-            <!-- Header Layout -->
-            <Frame BorderColor="Navy" CornerRadius="5" Padding="0">
-                <Grid BackgroundColor="Navy">
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Button row height -->
+        </Grid.RowDefinitions>
+        <!-- ScrollView to enable horizontal scrolling for the header and data -->
+        <ScrollView Grid.Row="0" Grid.RowSpan="2" Orientation="Horizontal" HorizontalScrollBarVisibility="Always">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!-- Header Layout -->
+                <Grid Grid.Row="0" BackgroundColor="Navy" Padding="10">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="SBSBID" TextColor="White" Margin="10"/>
-                    <Label Grid.Column="1" Text="FIRSTNAME" TextColor="White" Margin="10"/>
-                    <Label Grid.Column="2" Text="LASTNAME" TextColor="White" Margin="10"/>
-                    <Label Grid.Column="3" Text="SBSBEFFDT" TextColor="White" Margin="10"/>
-                    <Label Grid.Column="4" Text="SBSBTERMDT" TextColor="White" Margin="10"/>
-                    <Label Grid.Column="5" Text="SBELEVENTS" TextColor="White" Margin="10"/>
-                    <Label Grid.Column="6" Text="MEELEVENTS" TextColor="White" Margin="10"/>
-                </Grid>
-            </Frame>
-            <!-- Data Display -->
-            <Frame BorderColor="Navy" CornerRadius="5" Padding="0">
-                <CollectionView ItemsSource="{Binding ReportData}" BackgroundColor="White">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid BackgroundColor="#DDD">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <BoxView Grid.Column="0" BackgroundColor="White" Margin="1"/>
-                                <BoxView Grid.Column="1" BackgroundColor="White" Margin="1"/>
-                                <BoxView Grid.Column="2" BackgroundColor="White" Margin="1"/>
-                                <BoxView Grid.Column="3" BackgroundColor="White" Margin="1"/>
-                                <BoxView Grid.Column="4" BackgroundColor="White" Margin="1"/>
-                                <BoxView Grid.Column="5" BackgroundColor="White" Margin="1"/>
-                                <BoxView Grid.Column="6" BackgroundColor="White" Margin="1"/>
-                                <Label Grid.Column="0" Text="{Binding SBSBID}" Margin="10"/>
-                                <Label Grid.Column="1" Text="{Binding FIRSTNAME}" Margin="10"/>
-                                <Label Grid.Column="2" Text="{Binding LASTNAME}" Margin="10"/>
-                                <Label Grid.Column="3" Text="{Binding SBSBEFFDT}" Margin="10"/>
-                                <Label Grid.Column="4" Text="{Binding SBSBTERMDT}" Margin="10"/>
-                                <Label Grid.Column="5" Text="{Binding SBELEVENTS}" Margin="10"/>
-                                <Label Grid.Column="6" Text="{Binding MEELEVENTS}" Margin="10"/>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </Frame>
-            <!-- Export Button -->
-            <Button Text="Export to Excel"
-                    Clicked="OnExportButtonClicked"
-                    BackgroundColor="Navy"
-                    TextColor="White"
-                    CornerRadius="5"
-                    HorizontalOptions="Center"
-                    VerticalOptions="End"/>
-        </VerticalStackLayout>
-    </ScrollView>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <!-- Header Labels -->
+                <Label Grid.Column="0" Text="SBSBID" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="1" Text="FIRSTNAME" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="2" Text="LASTNAME" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="3" Text="SBSBEFFDT" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="4" Text="SBSBTERMDT" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="5" Text="SBELEVENTS" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="6" Text="MEELEVENTS" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="7" Text="XEELEVENTS" TextColor="White" HorizontalTextAlignment="Start"/>
+                <Label Grid.Column="8" Text="YEELEVENTS" TextColor="White" HorizontalTextAlignment="Start"/>
+            </Grid>
+                <!-- Data CollectionView -->
+                <CollectionView Grid.Row="1" ItemsSource="{Binding ReportData}" BackgroundColor="White">
+                    <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+                <!-- Data Display Layout -->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="#DDD" Padding="10,1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- Content Labels -->
+                            <Label Grid.Column="0" Text="{Binding SBSBID}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                            <Label Grid.Column="1" Text="{Binding FIRSTNAME}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                            <Label Grid.Column="2" Text="{Binding LASTNAME}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                            <Label Grid.Column="3" Text="{Binding SBSBEFFDT}" BackgroundColor="White" HorizontalTextAlignment="Start" />
+                            <Label Grid.Column="4" Text="{Binding SBSBTERMDT}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                            <Label Grid.Column="5" Text="{Binding SBELEVENTS}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                            <Label Grid.Column="6" Text="{Binding MEELEVENTS}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                            <Label Grid.Column="7" Text="{Binding MEELEVENTS}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                            <Label Grid.Column="8" Text="{Binding MEELEVENTS}" BackgroundColor="White" HorizontalTextAlignment="Start"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+             </CollectionView>
+            </Grid>
+        </ScrollView>
+        <!-- Export Button placed below the ScrollView -->
+        <Button Grid.Row="2" Text="Export to Excel"
+                Clicked="OnExportButtonClicked"
+                BackgroundColor="Navy"
+                TextColor="White"
+                CornerRadius="5"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,0,0,20"/>
+    </Grid>
 </ContentPage>
